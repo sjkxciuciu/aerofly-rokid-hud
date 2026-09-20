@@ -1,2 +1,3 @@
 ebf1d0488549aff2c2bfb0e07ee1bd1abcc0a5cc87ea07c2f18916c83258311d  AeroflyRokidHud-debug.apk
 347dd834003d6432eef55cf118d700e8cc493545c546cf43a282a5e269265b11  AeroflyRokidHud.dll
+628f45c673da17c57f491e69510f59cb9a3d0cc2a45e8f60228513f84c0d6a4c  AeroflyRokidHud-2.3.1-English.apk
