@@ -1,0 +1,13 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.evan.aeroflyrokidhud'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.evan.aeroflyrokidhud'
+        minSdk 24
+        targetSdk 35
+        versionCode 4
+        versionName '2.1.0'
+    }
+}
