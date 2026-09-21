@@ -1,5 +1,17 @@
 # Aerofly FS 4 × Rokid Flight HUD
 
+## ⬇ Download APK & DLL
+
+### [English APK · v2.3.1](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.3.1-English.apk)
+
+### [中文 APK · v2.3.0](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-debug.apk)
+
+### [Windows DLL · v2.3.0](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
+
+Choose one APK for the glasses and download the DLL for the PC. These links download the files directly. [Checksums](release/SHA256SUMS.txt).
+
+---
+
 [简体中文](README.md) | **English**
 
 Display Aerofly FS 4 flight instruments on display-equipped Rokid glasses.
@@ -8,9 +20,9 @@ Display Aerofly FS 4 flight instruments on display-equipped Rokid glasses.
 
 This project includes a Windows C++ external DLL and an Android APK. The PC reads simulator data and sends it to the glasses over the local network. Normal operation does not require a cloud service or a phone relay.
 
-This is an unofficial personal project, with no official affiliation with IPACS or Rokid. The current version is **2.1.0, experimental**. Builds, local protocol tests, and layout previews have been checked; on-glasses viewing and real Wi-Fi switching have not yet been verified.
+This is an unofficial personal project, with no official affiliation with IPACS or Rokid. The latest downloads are **Chinese APK 2.3.0, English APK 2.3.1, and the 2.3.0 DLL**. The overview and previews below were originally prepared for experimental version 2.1.0. Builds, local protocol tests, and layout previews have been checked; on-glasses viewing and real Wi-Fi switching have not yet been verified.
 
-**Language note:** this is the English project documentation. The current APK still uses Chinese status messages and alerts, alongside aviation abbreviations and units. It does not yet offer an English UI selector.
+**Language note:** a separate English APK is available in the download section above. Choose the APK for your preferred language.
 
 ![Landscape HUD layout preview](docs/HUD-wide-live.png)
 

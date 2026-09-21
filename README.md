@@ -1,5 +1,17 @@
 # Aerofly FS 4 × Rokid Flight HUD · 飞行仪表 HUD
 
+## ⬇ 安装包下载（点这里）
+
+### [📥 中文版 APK · 2.3.0](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-debug.apk)
+
+### [📥 英文版 APK · 2.3.1](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.3.1-English.apk)
+
+### [📥 电脑端 DLL · 2.3.0](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
+
+眼镜端选择一个语言版本的 APK，电脑端下载 DLL。点击上方链接直接下载，无需寻找右侧 Releases。[文件校验值](release/SHA256SUMS.txt)。
+
+---
+
 **简体中文** | [English](README.en.md)
 
 把 Aerofly FS 4 的飞行仪表显示在带显示屏的 Rokid 眼镜上。
@@ -8,7 +20,7 @@
 
 项目包含 Windows C++ 外部 DLL 和 Android APK。电脑读取模拟器数据，通过同一局域网传到眼镜；日常使用不需要云端服务或手机转发。
 
-这是个人开发的非官方项目，与 IPACS、Rokid 没有官方隶属关系。当前版本为 **2.1.0，实验版本**；已完成构建、本机协议测试和布局预览检查，尚未完成眼镜实机佩戴及真实 Wi-Fi 切换验证。
+这是个人开发的非官方项目，与 IPACS、Rokid 没有官方隶属关系。最新下载为 **中文版 APK 2.3.0、英文版 APK 2.3.1 与配套 DLL 2.3.0**；下方介绍与预览原为 2.1.0 实验版整理；已完成构建、本机协议测试和布局预览检查，尚未完成眼镜实机佩戴及真实 Wi-Fi 切换验证。
 
 ![横向 HUD 布局预览](docs/HUD-wide-live.png)
 
