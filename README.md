@@ -1,14 +1,16 @@
 # Aerofly FS 4 × Rokid Flight HUD · 飞行仪表 HUD
 
-## ⬇ 安装包下载（点这里）
+## ⬇ 2.5 下载（点这里）
 
-### [📥 中文版 APK · 2.3.0](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-debug.apk)
+### [📦 推荐：完整安装包（中英文 APK＋DLL＋设置工具）](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-Bilingual.zip)
 
-### [📥 英文版 APK · 2.3.1](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.3.1-English.apk)
+### [📥 中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-Chinese.apk) · [📥 English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-English.apk) · [📥 电脑 DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
 
-### [📥 电脑端 DLL · 2.3.0](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
+**跑道设置工具：** [下载 CMD](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.cmd) ＋ [配套 PS1（必须一起下载）](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.ps1)。解压后放在同一文件夹，双击 CMD。
 
-眼镜端选择一个语言版本的 APK，电脑端下载 DLL。点击上方链接直接下载，无需寻找右侧 Releases。[文件校验值](release/SHA256SUMS.txt)。
+### [📖 点这里看安装和跑道设置教程](docs/TUTORIAL-2.5.zh-CN.md)
+
+本版必须同时更新 APK 和 DLL。中英文 APK 二选一，互相覆盖安装。新增的 3° 几何参考不是 ILS。[文件校验值](release/SHA256SUMS.txt)。
 
 ---
 
@@ -20,7 +22,7 @@
 
 项目包含 Windows C++ 外部 DLL 和 Android APK。电脑读取模拟器数据，通过同一局域网传到眼镜；日常使用不需要云端服务或手机转发。
 
-这是个人开发的非官方项目，与 IPACS、Rokid 没有官方隶属关系。最新下载为 **中文版 APK 2.3.0、英文版 APK 2.3.1 与配套 DLL 2.3.0**；下方介绍与预览原为 2.1.0 实验版整理；已完成构建、本机协议测试和布局预览检查，尚未完成眼镜实机佩戴及真实 Wi-Fi 切换验证。
+这是个人开发的非官方项目，与 IPACS、Rokid 没有官方隶属关系。最新下载为 **中英文 APK 2.5 与配套 DLL 2.5**；下方介绍与预览原为 2.1.0 实验版整理；已完成构建、本机协议测试和布局预览检查，尚未完成眼镜实机佩戴及真实 Wi-Fi 切换验证。
 
 ![横向 HUD 布局预览](docs/HUD-wide-live.png)
 

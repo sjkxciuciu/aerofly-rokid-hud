@@ -1,0 +1,20 @@
+Aerofly Rokid HUD 2.5 - local verification
+
+Both APKs: build successful, lint 0 errors / 4 existing warnings, APK signature verified.
+Manifest: versionName 2.5, versionCode 25, native portrait coordinate system retained.
+HUD still uses the same 640x480 horizontal design in the native safe area.
+
+GlideCheck (CN and EN): 63 page/state/window checks per language.
+Geometry: 3 degree path, nautical miles/feet conversion, high and low sign.
+Invalid states: stale, no flight, no coordinates, no heading, unconfigured runway,
+invalid runway latitude, opposite direction, passed threshold, too close/far, off-axis.
+Runway elevation changes applied immediately; three-page cycle returns to HUD.
+Actual onDraw previewed via desktop Java2D Canvas adapter, NOT an Android/device render.
+
+Actual DLL loopback UDP: configured runway fields/precision, live reconfiguration,
+disabled/malformed/out-of-range settings, telemetry conversion, stale-data behavior,
+malformed SDK input, reconnect/new peer IP, shutdown/reinitialization passed.
+PowerShell setup tool: parsed successfully. The WinForms interaction was not device-tested.
+
+No glasses connected: physical optics, touchpad behavior and real-flight calibration
+have NOT been verified. Reference has no real ILS/terrain/obstacle awareness.

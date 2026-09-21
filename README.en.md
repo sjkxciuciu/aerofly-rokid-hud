@@ -1,14 +1,16 @@
 # Aerofly FS 4 × Rokid Flight HUD
 
-## ⬇ Download APK & DLL
+## ⬇ Download v2.5
 
-### [English APK · v2.3.1](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.3.1-English.apk)
+### [📦 Complete bundle — APKs + DLL + setup tool](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-Bilingual.zip)
 
-### [中文 APK · v2.3.0](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-debug.apk)
+### [English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-English.apk) · [中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-Chinese.apk) · [PC DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
 
-### [Windows DLL · v2.3.0](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
+**Runway setup:** [CMD launcher](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.cmd) + [required PS1 script](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.ps1). Keep both in the same extracted folder.
 
-Choose one APK for the glasses and download the DLL for the PC. These links download the files directly. [Checksums](release/SHA256SUMS.txt).
+### [📖 Installation & runway-reference tutorial](docs/TUTORIAL-2.5.en.md)
+
+Update both APK and DLL. Choose one language APK; they replace each other. The new 3° reference is geometric, not ILS. [Checksums](release/SHA256SUMS.txt).
 
 ---
 
@@ -20,7 +22,7 @@ Display Aerofly FS 4 flight instruments on display-equipped Rokid glasses.
 
 This project includes a Windows C++ external DLL and an Android APK. The PC reads simulator data and sends it to the glasses over the local network. Normal operation does not require a cloud service or a phone relay.
 
-This is an unofficial personal project, with no official affiliation with IPACS or Rokid. The latest downloads are **Chinese APK 2.3.0, English APK 2.3.1, and the 2.3.0 DLL**. The overview and previews below were originally prepared for experimental version 2.1.0. Builds, local protocol tests, and layout previews have been checked; on-glasses viewing and real Wi-Fi switching have not yet been verified.
+This is an unofficial personal project, with no official affiliation with IPACS or Rokid. The latest downloads are **Chinese APK 2.5, English APK 2.5, and the matching 2.5 DLL**. The overview and previews below were originally prepared for experimental version 2.1.0. Builds, local protocol tests, and layout previews have been checked; on-glasses viewing and real Wi-Fi switching have not yet been verified.
 
 **Language note:** a separate English APK is available in the download section above. Choose the APK for your preferred language.
 

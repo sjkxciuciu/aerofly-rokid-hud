@@ -1,0 +1,38 @@
+Aerofly Rokid HUD 2.5 / 中文与英文版
+
+1. 安装 AeroflyRokidHud-2.5-Chinese.apk 或 AeroflyRokidHud-2.5-English.apk。
+   两包使用相同应用 ID、签名和版本号，互相覆盖安装，不要同时运行两份。
+2. 电脑须使用配套 2.5 DLL。跑道设置前，下滑指示不可用属于正常情况。
+3. 双击 Set-ReferenceRunway.cmd，打开电脑端设置工具。
+   Runway name：机场/跑道名称，只输入英文、数字，例如 ICAO / 09。
+   Threshold latitude：着陆方向的跑道入口纬度，北纬正、南纬负，十进制度。
+   Threshold longitude：同一个入口的经度，东经正、西经负，十进制度。
+   Threshold elevation：这个入口的海拔标高，英尺 MSL，不是飞机高度。
+   Landing direction：从着陆入口沿跑道向另一端的真航向，0–360 度，不是磁航向。
+   请从与你所用场景一致的数据填写；不要使用机场中心坐标或凭跑道编号猜真航向。
+   Save / Enable 保存启用，约 1 秒更新；Disable reference 关闭。
+   配置保存在 Documents/Aerofly FS 4/external_dll/AeroflyRokidApproach.ini。
+   更换目的地时必须重新设置，不会自动跟随游戏航路。
+4. 镜腿轻触依次切换：仪表 → 地图 → 下滑参考 → 仪表。
+   地图页前滑放大、后滑缩小，保持原有横向布局和 100% 大小。
+5. 仪表旁新增 3°参考刻度；详情页显示所设跑道、剩余距离、垂直偏差。
+   菱形表示参考线相对飞机的位置：飞机偏高时，菱形在中线下方。
+   偏差正值表示飞机高于参考线；“接近”区间为角度偏差 ±0.15 度。
+   距离是沿跑道延长线到入口的距离，不是 DME 斜距。
+
+重要限制：这不是 ILS，不接收地面下滑台，不读取游戏真实下滑道。
+固定采用 3° 和越过跑道入口时高于入口 50 ft 的假设，未匹配真实机场进近程序。
+使用游戏气压高度，请正确设置飞机 QNH；错误的跑道标高/QNH 会导致错误偏差。
+仅在入口前 0.1–20 NM、进近方向约 ±60°、延长线附近显示参考。
+横向范围为 ±10°（最小半宽 0.1 NM），不是本地航向道/ILS 捕获范围。
+无飞机、数据超过 2.5 秒未更新、缺少位置/真航向、入口之后、偏离区域时隐藏菱形。
+这是模拟游戏辅助功能，不可用于真实飞行。电脑测试不能替代眼镜实机确认。
+
+English:
+Install either language APK and the matching DLL. Open Set-ReferenceRunway.cmd on PC.
+Enter the landing threshold latitude/longitude, elevation in feet MSL, and TRUE landing course.
+Save to enable. Change the reference manually for each destination; it does not follow the FMS.
+Tap cycles HUD / map / glide reference. Map swipes zoom. Positive error means above reference.
+The diamond shows the reference relative to the aircraft (above path -> diamond below center).
+Assumptions: 3 degrees, 50 ft threshold crossing height, barometric altitude with correct QNH.
+NOT ILS, NOT a flight director, NOT for real navigation. No terrain or obstacle protection.
