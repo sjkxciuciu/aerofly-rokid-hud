@@ -2,17 +2,20 @@
 
 **✅ 2.5 已经实机验证（作者确认）。**
 
-## ⬇ 2.5 下载（点这里）
+## ⬇ 2.6 下载（点这里）
 
-### [📦 推荐：完整安装包（中英文 APK＋DLL＋设置工具）](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-Bilingual.zip)
+### [📦 推荐：完整安装包（中英文 APK＋DLL＋设置工具）](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-Bilingual.zip)
 
-### [📥 中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-Chinese.apk) · [📥 English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-English.apk) · [📥 电脑 DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
+### [📥 中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-Chinese.apk) · [📥 English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-English.apk) · [📥 电脑 DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
 
 **跑道设置工具：** [下载 CMD](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.cmd) ＋ [配套 PS1（必须一起下载）](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.ps1)。解压后放在同一文件夹，双击 CMD。
 
 ### [📖 点这里看安装和跑道设置教程](docs/TUTORIAL-2.5.zh-CN.md)
 
 本版必须同时更新 APK 和 DLL。中英文 APK 二选一，互相覆盖安装。新增的 3° 几何参考不是 ILS。[文件校验值](release/SHA256SUMS.txt)。
+
+
+2.6 新增所有页面常驻 G 值；从普通 2.5 升级请同时更新 DLL（2.5 G 版 DLL 无需更换）。[2.6 说明](release/2.6-说明.txt) · [G 值范围与验证限制](release/2.5-G说明.txt)。上面的跑道设置教程仍适用；2.5 实机验证不代表新增 G 值已完成实机核对。
 
 ---
 
@@ -24,7 +27,7 @@
 
 项目包含 Windows C++ 外部 DLL 和 Android APK。电脑读取模拟器数据，通过同一局域网传到眼镜；日常使用不需要云端服务或手机转发。
 
-这是个人开发的非官方项目，与 IPACS、Rokid 没有官方隶属关系。最新下载为 **中英文 APK 2.5 与配套 DLL 2.5**；下方介绍与预览原为 2.1.0 实验版整理；已完成构建、本机协议测试和布局预览检查；2.5 已经在作者的 Rokid 眼镜上实机验证。
+这是个人开发的非官方项目，与 IPACS、Rokid 没有官方隶属关系。最新下载为 **中英文 APK 2.6 与配套 G 值 DLL**；下方介绍与预览原为 2.1.0 实验版整理；已完成构建、本机协议测试和布局预览检查；2.5 已经在作者的 Rokid 眼镜上实机验证。
 
 ![横向 HUD 布局预览](docs/HUD-wide-live.png)
 
@@ -53,7 +56,7 @@
 
 仓库提供当前构建产物：
 
-- [Android APK](release/AeroflyRokidHud-debug.apk)
+- [Android APK](release/AeroflyRokidHud-2.6-Chinese.apk)
 - [Windows x64 DLL](release/AeroflyRokidHud.dll)
 - [SHA-256 校验值](release/SHA256SUMS.txt)
 
@@ -78,7 +81,7 @@
 开启设备开发者模式和 ADB 后安装：
 
 ```powershell
-adb install -r .\release\AeroflyRokidHud-debug.apk
+adb install -r .\release\AeroflyRokidHud-2.6-Chinese.apk
 ```
 
 打开 **Aerofly HUD**，让电脑和眼镜处于同一局域网。出现“实时飞行”表示收到了有效仪表数据。
@@ -135,7 +138,7 @@ adb install -r .\release\AeroflyRokidHud-debug.apk
 .\Build-Apk.ps1
 ```
 
-脚本在 .build-cache 下载 Android SDK 与 Gradle，输出 release/AeroflyRokidHud-debug.apk。当前工具链为 Gradle 8.10.2、Android Gradle Plugin 8.8.2、compile/target SDK 35。
+脚本在 .build-cache 下载 Android SDK 与 Gradle，输出 release/AeroflyRokidHud-2.6-Chinese.apk。当前工具链为 Gradle 8.10.2、Android Gradle Plugin 8.8.2、compile/target SDK 35。
 
 注意：现有脚本会自动接受 Android SDK 许可，使用前请自行阅读并确认相应许可。
 

@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 $form = New-Object Windows.Forms.Form
-$form.Text = 'Aerofly HUD 2.5 - 3 degree reference / NOT ILS'
+$form.Text = 'Aerofly HUD 2.6 - 3 degree reference / NOT ILS'
 $form.ClientSize = New-Object Drawing.Size(620, 395)
 $form.StartPosition = 'CenterScreen'
 $form.FormBorderStyle = 'FixedDialog'

@@ -1,0 +1,11 @@
+Aerofly Rokid HUD 2.6 / versionCode 27
+
+中英文版本统一升级为 2.6，保留全部现有功能：横向仪表、航迹地图、3°参考下滑线、所有页面常驻 G 值。
+直接覆盖安装对应语言 APK。电脑 DLL 与 2.5 G 版一致，无须重新安装。
+轻触切换仪表 / 地图 / 下滑参考；地图页前后滑动缩放。
+首次设置参考跑道请运行 Set-ReferenceRunway.cmd。
+下滑参考不是 ILS；G 值或飞行数据无效时显示不可用，不填充虚构数据。
+详细功能限制沿用包内 2.5-使用说明.txt 与 2.5-G说明.txt；其中版本号为历史标记。
+
+Both language APKs are version 2.6. Install over the existing app.
+Features and PC DLL are unchanged from the 2.5 G build.

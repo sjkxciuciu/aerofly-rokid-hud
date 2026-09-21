@@ -2,17 +2,20 @@
 
 **✅ v2.5 tested on actual glasses (confirmed by the author).**
 
-## ⬇ Download v2.5
+## ⬇ Download v2.6
 
-### [📦 Complete bundle — APKs + DLL + setup tool](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-Bilingual.zip)
+### [📦 Complete bundle — APKs + DLL + setup tool](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-Bilingual.zip)
 
-### [English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-English.apk) · [中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-Chinese.apk) · [PC DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
+### [English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-English.apk) · [中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-Chinese.apk) · [PC DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
 
 **Runway setup:** [CMD launcher](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.cmd) + [required PS1 script](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.ps1). Keep both in the same extracted folder.
 
 ### [📖 Installation & runway-reference tutorial](docs/TUTORIAL-2.5.en.md)
 
 Update both APK and DLL. Choose one language APK; they replace each other. The new 3° reference is geometric, not ILS. [Checksums](release/SHA256SUMS.txt).
+
+
+v2.6 adds persistent G readings on every page. Update the DLL when upgrading from standard v2.5; the 2.5 G DLL is unchanged. [v2.6 notes](release/2.6-说明.txt) · [G-reading limitations](release/2.5-G说明.txt). The runway tutorial still applies. The v2.5 device-validation statement does not establish live validation of the new G readings.
 
 ---
 
@@ -24,7 +27,7 @@ Display Aerofly FS 4 flight instruments on display-equipped Rokid glasses.
 
 This project includes a Windows C++ external DLL and an Android APK. The PC reads simulator data and sends it to the glasses over the local network. Normal operation does not require a cloud service or a phone relay.
 
-This is an unofficial personal project, with no official affiliation with IPACS or Rokid. The latest downloads are **Chinese APK 2.5, English APK 2.5, and the matching 2.5 DLL**. The overview and previews below were originally prepared for experimental version 2.1.0. Builds, local protocol tests, and layout previews have been checked. The author confirms that v2.5 has been tested on their Rokid glasses.
+This is an unofficial personal project, with no official affiliation with IPACS or Rokid. The latest downloads are **Chinese APK 2.6, English APK 2.6, and the matching G-enabled DLL**. The overview and previews below were originally prepared for experimental version 2.1.0. Builds, local protocol tests, and layout previews have been checked. The author confirms that v2.5 has been tested on their Rokid glasses.
 
 **Language note:** a separate English APK is available in the download section above. Choose the APK for your preferred language.
 
@@ -55,7 +58,7 @@ The image uses simulated values and was generated from the actual HudView drawin
 
 Current build artifacts are included in the repository:
 
-- [Android APK](release/AeroflyRokidHud-debug.apk)
+- [Android APK](release/AeroflyRokidHud-2.6-English.apk)
 - [Windows x64 DLL](release/AeroflyRokidHud.dll)
 - [SHA-256 checksums](release/SHA256SUMS.txt)
 
@@ -80,7 +83,7 @@ The target is **display-equipped Rokid glasses that allow installation of a comp
 Enable developer mode and ADB on the device, then install:
 
 ```powershell
-adb install -r .\release\AeroflyRokidHud-debug.apk
+adb install -r .\release\AeroflyRokidHud-2.6-English.apk
 ```
 
 Open **Aerofly HUD** and connect the PC and glasses to the same local network. “实时飞行” means valid flight data is being received.
@@ -138,7 +141,7 @@ Requires a working JDK (JDK 21 was used locally) and network access for build to
 .\Build-Apk.ps1
 ```
 
-The script downloads the Android SDK and Gradle into .build-cache and produces release/AeroflyRokidHud-debug.apk. The current toolchain uses Gradle 8.10.2, Android Gradle Plugin 8.8.2, and compile/target SDK 35.
+The script downloads the Android SDK and Gradle into .build-cache and produces release/AeroflyRokidHud-2.6-English.apk. The current toolchain uses Gradle 8.10.2, Android Gradle Plugin 8.8.2, and compile/target SDK 35.
 
 The existing script automatically accepts Android SDK licenses. Review and agree to the relevant licenses before using it.
 

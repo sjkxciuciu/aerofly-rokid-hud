@@ -1,0 +1,19 @@
+2.5 G-display update / versionCode 26
+
+中英文版的仪表、地图、下滑参考页顶部始终显示机体法向 G 值。
+正负号保留两位小数；数据缺失、无飞机或断线时显示 -- G。
+须配合新版 DLL，旧版 DLL 不提供 g 字段。
+
+计算：机体 Z 轴（向上）的惯性加速度减去重力加速度，再除以 9.80665。
+只接受 SDK 明确带 Body 标记的 Aircraft.Acceleration / Aircraft.Gravity 向量。
+不把全局坐标 Z 或加速度限制字段误当作 G 值，不用默认 1 G 填充缺失数据。
+两向量须在 500ms 内更新，时间差不超过 100ms；数据不满足要求时显示 -- G。
+本地注入测试：静止/平飞 +1G、上拉 +2G、自由落体 0G、负载 -1G。
+眼镜实机和实际机型的 SDK 数据尚未验证；需在游戏内与 G 表核对。
+
+Both languages display signed normal-axis G on every page. Missing/stale data is -- G.
+Body-frame acceleration minus body-frame gravity, divided by standard gravity.
+Local synthetic telemetry and layout checks only; not yet verified on glasses or live aircraft.
+
+SDK: https://www.aerofly.com/developer/
+Body-axis reference (+Z up): https://www.aerofly.com/dokuwiki/doku.php/sdk:aircraft:modelling
