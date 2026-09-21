@@ -60,7 +60,7 @@ Update it manually when changing destination; it does not follow the FMS. **Disa
 - Positive vertical deviation means the aircraft is above the reference. The diamond represents the reference relative to the aircraft, so it appears below center when the aircraft is high.
 - Distance is along the runway extension to the threshold, not DME slant range.
 
-Actual touch-event forwarding depends on the glasses' firmware and still needs device confirmation. The layout remains horizontally arranged.
+The author confirms that v2.5 has been tested on actual glasses; touch compatibility may differ on other models or firmware. The layout remains horizontally arranged.
 
 ## 6. Troubleshooting
 
@@ -80,4 +80,4 @@ This is a **3° geometric reference for simulation, not ILS or a flight director
 
 The reference is limited to 0.1–20 NM before the threshold, approximately ±60° approach direction, and near the runway extension. The lateral region is ±10°, with a minimum half-width of 0.1 NM. The diamond is hidden when unconfigured, missing/stale data, past the threshold, or outside the region. Do not use it for real flight.
 
-See [local test notes](../release/2.5-tests.txt). Desktop checks are not on-glasses validation.
+See [local test notes](../release/2.5-tests.txt). Separately, the author confirms that v2.5 has been tested on Rokid glasses; the linked notes retain their original desktop-test scope.

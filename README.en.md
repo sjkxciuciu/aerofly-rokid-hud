@@ -1,5 +1,7 @@
 # Aerofly FS 4 × Rokid Flight HUD
 
+**✅ v2.5 tested on actual glasses (confirmed by the author).**
+
 ## ⬇ Download v2.5
 
 ### [📦 Complete bundle — APKs + DLL + setup tool](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.5-Bilingual.zip)
@@ -22,7 +24,7 @@ Display Aerofly FS 4 flight instruments on display-equipped Rokid glasses.
 
 This project includes a Windows C++ external DLL and an Android APK. The PC reads simulator data and sends it to the glasses over the local network. Normal operation does not require a cloud service or a phone relay.
 
-This is an unofficial personal project, with no official affiliation with IPACS or Rokid. The latest downloads are **Chinese APK 2.5, English APK 2.5, and the matching 2.5 DLL**. The overview and previews below were originally prepared for experimental version 2.1.0. Builds, local protocol tests, and layout previews have been checked; on-glasses viewing and real Wi-Fi switching have not yet been verified.
+This is an unofficial personal project, with no official affiliation with IPACS or Rokid. The latest downloads are **Chinese APK 2.5, English APK 2.5, and the matching 2.5 DLL**. The overview and previews below were originally prepared for experimental version 2.1.0. Builds, local protocol tests, and layout previews have been checked. The author confirms that v2.5 has been tested on their Rokid glasses.
 
 **Language note:** a separate English APK is available in the download section above. Choose the APK for your preferred language.
 
@@ -156,7 +158,7 @@ Test-Hud-Stream.ps1    Simulated telemetry sender
 
 Completed: C++ compilation, APK build and signature verification, local DLL loading and UDP unicast tests, unit conversion, stale-data handling, re-registration, and reinitialization; Java receiver checks for malformed and out-of-order packets, 30 rapid pause/resume cycles, rebinding after silence, and recovery after a port becomes available; desktop previews for normal, warning, and disconnected states.
 
-Not yet completed: on-glasses viewing, real Wi-Fi switching, or verification of every aircraft's fields and alert behavior. Fields not provided by the simulator are shown as unavailable.
+The author confirms that v2.5 has been tested on actual glasses. This applies to the author's device and environment, not comprehensive coverage of real Wi-Fi switching, every device model, or every aircraft's fields and alert behavior. Fields not provided by the simulator are shown as unavailable.
 
 ## Versions and third-party material
 
