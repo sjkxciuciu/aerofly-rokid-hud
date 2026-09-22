@@ -9,6 +9,7 @@
 [中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-AutoRunway-Chinese.apk) · [English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-AutoRunway-English.apk) · [DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll) · [跑道数据库 DAT（必需）](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidRunways.dat)
 
 **备用设置工具：** [CMD 设置工具](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.cmd) + [配套 PS1](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.ps1)（必须同目录）
+**飞行记录：** [打开电脑记录文件夹 CMD](release/Open-FlightRecords.cmd) · [记录说明](release/2.6-FlightRecorder说明.txt)。记录保存在电脑 external_dll\flight-records，每秒写入 CSV；更新完整包中的新版 DLL 后，启动游戏飞行即可自动记录。
 
 已启用自动模式时，日常使用无需打开此工具；仅在首次启用自动模式、自动选错跑道需手动指定，或关闭/恢复参考功能时使用。
 

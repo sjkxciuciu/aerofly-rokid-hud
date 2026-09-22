@@ -9,6 +9,7 @@
 [English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-AutoRunway-English.apk) · [中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-AutoRunway-Chinese.apk) · [DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll) · [Required runway database](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidRunways.dat)
 
 **Backup settings tool:** [CMD launcher](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.cmd) + [Required PS1](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.ps1) — keep together.
+**Flight logs:** [Open the PC log folder (CMD)](release/Open-FlightRecords.cmd) · [Recorder notes](release/2.6-FlightRecorder说明.txt). Logs are saved on the PC under external_dll/flight-records as CSV at about 1 Hz. Update to the DLL in the complete bundle, then start a flight to record automatically.
 
 Once automatic mode is enabled, you do not need to open this tool for normal use. Use it only to enable automatic mode initially, manually override an incorrect runway selection, or disable/restore the reference.
 

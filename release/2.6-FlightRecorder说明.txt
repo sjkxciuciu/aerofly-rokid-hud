@@ -1,0 +1,14 @@
+Aerofly Rokid HUD 2.6 — 电脑端飞行记录 / PC flight recorder
+
+此功能只需要更新电脑端 DLL；眼镜 APK 保持现有 2.6 自动跑道版即可。
+
+使用：完全退出 Aerofly FS 4，将新版 AeroflyRokidHud.dll 放入：
+文档\Aerofly FS 4\external_dll\
+重新启动游戏。每次获得有效飞行数据时，DLL 会在：
+文档\Aerofly FS 4\external_dll\flight-records\
+自动创建 CSV 记录。双击 Open-FlightRecords.cmd 可打开该文件夹。
+
+记录约每秒一条，包含：UTC 时间、空速、高度、俯仰、滚转、航向、油门、襟翼、减速板、垂直速度、起落架、经纬度、真航向、各警报、G 值、当前参考跑道和自动/手动模式。
+掉线、恢复和游戏/DLL 关闭会写入 EVENT 行。CSV 可用 Excel、WPS 或其他表格软件打开。
+
+日志只保存在电脑，眼镜不保存飞行记录。CSV 是模拟器遥测记录，不是飞行数据记录器，不能用于真实飞行。
