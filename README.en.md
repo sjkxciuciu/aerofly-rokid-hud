@@ -8,7 +8,9 @@
 
 [English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-AutoRunway-English.apk) · [中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-AutoRunway-Chinese.apk) · [DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll) · [Required runway database](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidRunways.dat)
 
-[CMD launcher](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.cmd) + [Required PS1](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.ps1) — keep together.
+**Backup settings tool:** [CMD launcher](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.cmd) + [Required PS1](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.ps1) — keep together.
+
+Once automatic mode is enabled, you do not need to open this tool for normal use. Use it only to enable automatic mode initially, manually override an incorrect runway selection, or disable/restore the reference.
 
 ### [📖 Installation and automatic-runway tutorial](docs/TUTORIAL-2.6.en.md)
 
