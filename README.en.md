@@ -49,9 +49,9 @@ No PC: check DLL location, game restart and network. No automatic reference: che
 
 **The author confirmed device testing for v2.5, not this new v2.6 AutoRunway update.** New-version notes record local DLL/UDP, selection/locking, regression and Android build/lint checks, but no on-glasses validation of the new features. This upload checks APK version/signatures and bundle consistency, not every device or aircraft.
 
-![Historical wide HUD layout preview](docs/HUD-wide-live.png)
+![v2.6 preview of all three pages](docs/2.6-all-pages.svg)
 
-Historical layout rendered with simulated values; not a device photo or a screenshot of the latest AutoRunway page.
+Illustrated from the v2.6 interface structure: instruments, map, and automatic runway reference. Values are illustrative, not a glasses photo. The map is schematic; actual labels and roads come from online OpenStreetMap.
 
 ## Source and older versions
 

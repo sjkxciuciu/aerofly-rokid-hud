@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="820" viewBox="0 0 1800 820">
+<defs>
+  <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#07120e"/><stop offset="1" stop-color="#020504"/></linearGradient>
+  <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#08140f"/><stop offset="1" stop-color="#020806"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    .ui{font-family:'Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif;fill:#78ffa8}.dim{fill:#4cae75}.line{stroke:#368c59;stroke-width:1.4}.soft{stroke:#235c3a;stroke-width:1.2}.small{font-size:14px}.med{font-size:18px}.bold{font-weight:700}.mono{font-family:Consolas,monospace}.card{fill:#08110e;stroke:#235c3a;stroke-width:2}.screen{fill:url(#glass);stroke:#62d990;stroke-width:2}
+  </style>
+</defs>
+<rect width="1800" height="820" fill="url(#bg)"/>
+<text x="900" y="58" text-anchor="middle" class="ui bold" font-size="34">AEROFLY FS 4 × ROKID HUD 2.6</text>
+<text x="900" y="88" text-anchor="middle" class="ui med">三个页面 · 轻触切换　　/　　Three pages · tap to cycle</text>
+
+<!-- CARD 1: INSTRUMENTS -->
+<g transform="translate(34 120)">
+ <rect class="card" width="552" height="654" rx="22"/>
+ <text x="24" y="37" class="ui bold" font-size="24">01　飞行仪表 / FLIGHT HUD</text>
+ <rect class="screen" x="17" y="55" width="518" height="390" rx="12"/>
+ <g transform="translate(17 55) scale(.809375)">
+  <text x="20" y="30" class="ui bold" font-size="23">AERO / FLIGHT</text><text x="620" y="30" text-anchor="end" class="ui" font-size="20">实时飞行</text>
+  <rect x="20" y="44" width="600" height="36" rx="8" class="line" fill="none"/><circle cx="35" cy="62" r="3" fill="#78ffa8"/><text x="320" y="70" text-anchor="middle" class="ui" font-size="20">无活动警报</text>
+  <g class="ui"><text x="30" y="112" font-size="15">空速 IAS</text><text x="30" y="164" class="mono bold" font-size="48">142</text><text x="132" y="164" font-size="18">kt</text>
+   <text x="30" y="210" font-size="15">高度 ALT</text><text x="30" y="262" class="mono bold" font-size="44">3,500</text><text x="132" y="280" font-size="18">ft</text>
+   <text x="30" y="308" font-size="15">垂直速度</text><text x="30" y="355" class="mono bold" font-size="38">+720</text><text x="132" y="378" font-size="16">ft/min</text></g>
+  <circle cx="257" cy="286" r="100" fill="none" class="line"/><path d="M160 286h194 M175 257h164 M183 316h148" class="soft" fill="none"/><path d="M210 286h35l12 9 12-9h35" stroke="#78ffa8" stroke-width="4" fill="none"/><text x="257" y="196" text-anchor="middle" class="ui mono bold" font-size="24">274°</text><text x="257" y="408" text-anchor="middle" class="ui" font-size="15">P +4°　B -2°</text>
+  <text x="442" y="156" text-anchor="middle" class="ui" font-size="16">3°</text><path d="M442 183v125 M426 246h32" class="line" fill="none"/><path d="M442 257l8 8-8 8-8-8z" stroke="#78ffa8" fill="none" stroke-width="2"/><text x="442" y="332" text-anchor="middle" class="ui small">适中</text><text x="442" y="350" text-anchor="middle" class="dim small">参考</text>
+  <text x="494" y="203" text-anchor="middle" class="ui" font-size="15">襟翼</text><text x="591" y="203" text-anchor="middle" class="ui" font-size="15">减速板</text>
+  <g fill="#78ffa8"><rect x="486" y="330" width="16" height="8"/><rect x="486" y="344" width="16" height="8"/><rect x="486" y="358" width="16" height="8"/><rect x="583" y="372" width="16" height="8"/></g>
+  <text x="494" y="405" text-anchor="middle" class="ui mono" font-size="21">38%</text><text x="591" y="405" text-anchor="middle" class="ui mono" font-size="21">6%</text>
+  <rect x="152" y="434" width="213" height="40" rx="7" class="line" fill="none"/><text x="170" y="461" class="ui med">起落架　放下</text>
+  <text x="20" y="421" class="ui med">油门</text><text x="620" y="422" text-anchor="end" class="ui mono" font-size="24">68%</text><path d="M20 434h600" class="soft"/><text x="20" y="458" class="ui small">连接 单播　/　20 Hz</text><text x="620" y="458" text-anchor="end" class="ui small">距上次收包 34 ms</text><text x="20" y="478" class="dim small">重试 0 · 异常包 0</text><text x="340" y="30" text-anchor="middle" class="ui bold" font-size="21" filter="url(#glow)">+1.02 G</text>
+ </g>
+ <text x="26" y="486" class="ui med">空速 · 高度 · 垂直速度 · 姿态 · 航向</text>
+ <text x="26" y="516" class="ui med">襟翼 · 减速板 · 起落架 · 油门 · 警报</text>
+ <text x="26" y="546" class="ui med">参考下滑偏差与连接诊断</text>
+ <text x="26" y="610" class="dim small">G 值在三个页面顶部持续显示</text>
+</g>
+
+<!-- CARD 2: MAP -->
+<g transform="translate(624 120)">
+ <rect class="card" width="552" height="654" rx="22"/>
+ <text x="24" y="37" class="ui bold" font-size="24">02　航迹地图 / FLIGHT MAP</text>
+ <rect class="screen" x="17" y="55" width="518" height="390" rx="12"/>
+ <g transform="translate(17 55) scale(.809375)">
+  <text x="20" y="30" class="ui bold" font-size="25">地理地图</text><text x="620" y="30" text-anchor="end" class="ui" font-size="20">北向上</text>
+  <rect x="20" y="44" width="600" height="36" rx="8" class="line" fill="none"/><text x="320" y="70" text-anchor="middle" class="ui" font-size="20">无活动警报</text>
+  <rect x="20" y="92" width="600" height="292" rx="5" fill="#0b2419" stroke="#368c59"/>
+  <g fill="#103522" stroke="#266342" stroke-width="2"><path d="M25 100h105l28 36-21 43H37z"/><path d="M420 101h190v85l-55 15-29-30-61 13z"/><path d="M40 290l63-35 48 9 23 52-62 60H28z"/><path d="M445 267l40-35 121 31v112H476z"/><path d="M230 104l43 17-5 39-54-8z"/></g>
+  <g fill="none" stroke="#43a86c" stroke-width="3"><path d="M-8 204 Q110 183 198 203T370 194T650 205"/><path d="M84 390Q145 300 191 240T267 90"/><path d="M365 390Q335 308 392 260T501 91"/><path d="M2 330Q112 310 194 337T359 320T650 347"/><path d="M23 260L151 272 228 249 328 260 399 241 603 256"/></g>
+  <g class="ui small"><text x="139" y="200">A113</text><text x="266" y="160">M4</text><text x="490" y="307">A30</text><text x="370" y="226">London</text><text x="452" y="217">Heathrow</text></g>
+  <path d="M302 207v42 M281 234l21-9 21 9 M294 246h16" fill="none" stroke="#78ffa8" stroke-width="5" filter="url(#glow)"/>
+  <text x="320" y="113" text-anchor="middle" class="ui med">N</text><text x="30" y="244" class="ui med">W</text><text x="610" y="244" text-anchor="end" class="ui med">E</text>
+  <rect x="23" y="337" width="594" height="47" fill="#020806"/><text x="32" y="358" class="ui small">在线底图 / 缓存　 ·　航迹</text><text x="608" y="358" text-anchor="end" class="ui mono">2.0 NM</text><text x="320" y="379" text-anchor="middle" class="ui small">© OpenStreetMap contributors</text>
+  <text x="20" y="412" class="ui med">纬度 51.4775　经度 -0.4805</text><text x="20" y="440" class="ui med">IAS 140 kt　·　ALT 1,000 ft</text><text x="620" y="440" text-anchor="end" class="ui med">真航向 0°</text><path d="M20 449h600" class="soft"/><text x="320" y="474" text-anchor="middle" class="ui med">轻触：下滑参考　·　前滑放大　·　后滑缩小</text><text x="340" y="30" text-anchor="middle" class="ui bold" font-size="21" filter="url(#glow)">+1.02 G</text>
+ </g>
+ <text x="26" y="486" class="ui med">飞机位置 · 实时航迹 · 真航向</text>
+ <text x="26" y="516" class="ui med">在线 OpenStreetMap 地名与道路</text>
+ <text x="26" y="546" class="ui med">自动跟随 · 北向上 · 手势缩放</text>
+ <text x="26" y="610" class="dim small">底图需联网；不可用时仍显示航迹</text>
+</g>
+
+<!-- CARD 3: APPROACH -->
+<g transform="translate(1214 120)">
+ <rect class="card" width="552" height="654" rx="22"/>
+ <text x="24" y="37" class="ui bold" font-size="24">03　自动跑道 / APPROACH</text>
+ <rect class="screen" x="17" y="55" width="518" height="390" rx="12"/>
+ <g transform="translate(17 55) scale(.809375)">
+  <text x="20" y="31" class="ui bold" font-size="25">3° 下滑参考</text><text x="620" y="30" text-anchor="end" class="ui" font-size="20">2.6 · 非 ILS</text>
+  <rect x="20" y="45" width="600" height="36" rx="8" class="line" fill="none"/><text x="320" y="71" text-anchor="middle" class="ui" font-size="20">无活动警报</text>
+  <text x="320" y="111" text-anchor="middle" class="ui" font-size="21">自动锁定　EGLL / 27R</text>
+  <text x="320" y="151" text-anchor="middle" class="ui bold" font-size="27">高于参考线</text>
+  <text x="30" y="191" class="dim med">距跑道入口</text><text x="30" y="237" class="ui mono bold" font-size="35">4.82 NM</text>
+  <text x="30" y="279" class="dim med">垂直偏差（正值为偏高）</text><text x="30" y="326" class="ui mono bold" font-size="35">+186 ft</text>
+  <path d="M490 180v160 M478 260h24 M484 220h12 M484 300h12" class="line" fill="none"/><path d="M490 293l9 9-9 9-9-9z" stroke="#78ffa8" fill="none" stroke-width="2"/><text x="470" y="369" text-anchor="middle" class="ui small">菱形表示参考线位置</text>
+  <path d="M20 384h600" class="soft"/><text x="320" y="411" text-anchor="middle" class="ui med">使用气压高度：请正确设置 QNH</text><text x="320" y="439" text-anchor="middle" class="ui med">假设入口高 50 ft · 仅供模拟参考</text><text x="320" y="474" text-anchor="middle" class="ui med">轻触返回仪表</text><text x="340" y="30" text-anchor="middle" class="ui bold" font-size="21" filter="url(#glow)">+1.02 G</text>
+ </g>
+ <text x="26" y="486" class="ui med">显示自动匹配的机场与跑道</text>
+ <text x="26" y="516" class="ui med">入口距离 · 垂直偏差 · 偏高/偏低</text>
+ <text x="26" y="546" class="ui med">按位置和真航向选跑道，可手动覆盖</text>
+ <text x="26" y="610" class="dim small">3° 几何参考，不是 ILS；请核对跑道</text>
+</g>
+<text x="900" y="806" text-anchor="middle" class="dim small">界面功能预览，使用模拟飞行数据；不是眼镜实拍。航迹底图需要互联网。　/　UI preview with simulated data; not a glasses photograph. Map tiles require internet.</text>
+</svg>
