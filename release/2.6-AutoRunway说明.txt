@@ -1,0 +1,36 @@
+Aerofly Rokid HUD 2.6 — 自动选择参考跑道 / Automatic reference runway
+
+眼镜：安装 AutoRunway-Chinese.apk 或 AutoRunway-English.apk，二选一覆盖安装。
+电脑：AeroflyRokidHud.dll 和 AeroflyRokidRunways.dat 放在
+文档\Aerofly FS 4\external_dll，退出游戏后更换 DLL，再启动游戏。
+本机已经安装并启用自动模式，保留了原来 ZSPD / 35R 的手动设置。
+
+使用：轻触切换到第三页“3° 下滑参考”，查看自动选择的机场 / 跑道名称。
+按飞机位置、真航向和跑道入口匹配，不读取游戏 FMS，不代表 ATC 指定跑道。
+在入口前约 0.1–20 海里、航向相差不超过 45° 且接近延长线时寻找候选；
+候选稳定 3 秒才显示。8 海里内接近中线时锁定，减少平行跑道间跳动。
+失去飞行数据、更换机场或明显离开进近方向后，清除或重新选择。
+平行跑道可能选错：务必核对页面跑道名称；不要把自动选择当成飞行许可。
+若需指定跑道，打开 Set-ReferenceRunway.cmd，填写数据并按 Save / Enable。
+恢复自动模式按 Automatic runway selection；关闭参考按 Disable reference。
+
+这不是 ILS，也不读取游戏实际下滑信号。参考线假定 3°、入口上方 50 ft，
+使用气压高度，需要正确 QNH。仅供模拟游戏，不用于真实飞行。
+数据来自 OurAirports 公共领域跑道资料，本包包含 20,773 个有效跑道端；
+并非覆盖所有机场，可能与游戏景物不同。位移入口按方向平移，入口高程
+在两端都有高程时作线性估计，不是测绘精度。自动选择不需要联网；在线底图需要网络。
+来源：https://ourairports.com/data/
+字段说明：https://ourairports.com/help/data-dictionary.html
+原始数据：https://github.com/davidmegginson/ourairports-data/blob/main/runways.csv
+
+验证：Windows DLL 加载及 UDP、自动选择/锁定、失去数据、手动覆盖/关闭；
+浦东进近、方向不匹配、机场切换、跨日期变更线、通过跑道、G 值及航向回归；
+中英文 Android 编译和 lint、页面状态与安全显示区域检查。
+未连接眼镜调试，未进行眼镜实机验证。
+
+English: Install either language APK (same application ID). The DLL and runway database
+must be placed together in Documents\Aerofly FS 4\external_dll, then restart Aerofly.
+Automatic selection uses position and true heading, not the FMS or ATC assignment.
+Check the displayed runway, especially at airports with parallel runways.
+Reference only: assumed 3-degree path and 50-ft threshold crossing height, NOT ILS.
+Set QNH correctly. Database may differ from game scenery. Simulator use only.

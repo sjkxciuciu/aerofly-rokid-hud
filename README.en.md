@@ -1,173 +1,59 @@
 # Aerofly FS 4 × Rokid Flight HUD
 
-**✅ v2.5 tested on actual glasses (confirmed by the author).**
+[简体中文](README.md)
 
-## ⬇ Download v2.6
+## ⬇ Latest v2.6 AutoRunway (versionCode 29)
 
-### [📦 Complete bundle — APKs + DLL + setup tool](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-Bilingual.zip)
+### [📦 下载完整包 / Download complete bundle](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-AutoRunway-Bilingual.zip)
 
-### [English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-English.apk) · [中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-Chinese.apk) · [PC DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll)
+[English APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-AutoRunway-English.apk) · [中文 APK](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud-2.6-AutoRunway-Chinese.apk) · [DLL](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidHud.dll) · [Required runway database](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/AeroflyRokidRunways.dat)
 
-**Runway setup:** [CMD launcher](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.cmd) + [required PS1 script](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.ps1). Keep both in the same extracted folder.
+[CMD launcher](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.cmd) + [Required PS1](https://github.com/sjkxciuciu/aerofly-rokid-hud/raw/refs/heads/main/release/Set-ReferenceRunway.ps1) — keep together.
 
-### [📖 Installation & runway-reference tutorial](docs/TUTORIAL-2.5.en.md)
+### [📖 Installation and automatic-runway tutorial](docs/TUTORIAL-2.6.en.md)
 
-Update both APK and DLL. Choose one language APK; they replace each other. The new 3° reference is geometric, not ILS. [Checksums](release/SHA256SUMS.txt).
+**Update the APK and DLL, and install the runway database.** The original v2.6 / G DLL does not provide AutoRunway. Choose one language APK; they replace each other.
 
+[Checksums](release/SHA256SUMS.txt) · [Development notes and validation scope](release/2.6-AutoRunway说明.txt)
 
-v2.6 adds persistent G readings on every page. Update the DLL when upgrading from standard v2.5; the 2.5 G DLL is unchanged. [v2.6 notes](release/2.6-说明.txt) · [G-reading limitations](release/2.5-G说明.txt). The runway tutorial still applies. The v2.5 device-validation statement does not establish live validation of the new G readings.
+## Features and limitations
 
----
+- Wide, large green HUD: speed, altitude, vertical speed, attitude, heading, gear, flaps, spoilers, alerts, connection diagnostics and throttle percentage.
+- Persistent G readings on HUD, map and reference pages; missing data remains unavailable.
+- Online basemap and flight track. LAN telemetry and automatic runway selection work without internet; online map tiles require internet.
+- Runway selection uses position, true heading and threshold geometry, not the FMS or ATC assignment. Always check the label, especially near parallel runways.
+- The reference assumes 3° and a 50 ft threshold crossing: **not ILS**. Set QNH correctly. Simulation only.
+- Throttle percentage is not actual thrust or N1. Overall gear position is not individual downlock confirmation.
 
-[简体中文](README.md) | **English**
+## Quick installation
 
-Display Aerofly FS 4 flight instruments on display-equipped Rokid glasses.
+1. Close Aerofly FS 4 and extract the complete bundle.
+2. Press Windows + R, enter `shell:Personal`, and put **AeroflyRokidHud.dll and AeroflyRokidRunways.dat** in `Aerofly FS 4\external_dll` under Documents, not the Steam folder.
+3. Install one language APK on the glasses (Android 7.0 / API 24 or newer):
+   `adb install -r AeroflyRokidHud-2.6-AutoRunway-English.apk`
+4. Run the CMD and click **Automatic runway selection**. Downloading the bundle does not configure your PC automatically.
+5. Connect both devices to a reachable LAN, restart the simulator and enter a flight, then open the HUD. Tap to cycle HUD → map → reference; swipe forward/backward on the map to zoom.
 
-**Landscape dashboard · Large green HUD · Chinese alerts · Live telemetry over LAN**
-
-This project includes a Windows C++ external DLL and an Android APK. The PC reads simulator data and sends it to the glasses over the local network. Normal operation does not require a cloud service or a phone relay.
-
-This is an unofficial personal project, with no official affiliation with IPACS or Rokid. The latest downloads are **Chinese APK 2.6, English APK 2.6, and the matching G-enabled DLL**. The overview and previews below were originally prepared for experimental version 2.1.0. Builds, local protocol tests, and layout previews have been checked. The author confirms that v2.5 has been tested on their Rokid glasses.
-
-**Language note:** a separate English APK is available in the download section above. Choose the APK for your preferred language.
-
-![Landscape HUD layout preview](docs/HUD-wide-live.png)
-
-The image uses simulated values and was generated from the actual HudView drawing code through a desktop Canvas adapter. **It is not a screenshot captured from the glasses.**
-
-## Features
-
-| Area | Instruments |
-| --- | --- |
-| Left | Indicated airspeed in kt, altitude in ft, vertical speed in ft/min |
-| Center | Heading, pitch/bank attitude indicator, overall landing gear position |
-| Right | Segmented flap and spoiler indicators with percentages |
-| Top | Flight/connection status and Chinese alerts |
-| Bottom | Throttle percentage, transmission mode, packet rate, time since last packet, retry and malformed-packet counts |
-
-- A 640×480 landscape design with large text on a green-on-black display. A 480×640 portrait layout is retained for firmware that still supplies a portrait window.
-- Chinese alerts for engine fire, master warning, low oil/fuel/hydraulic pressure, altitude alert, and caution.
-- Landing gear states: up, in transit, down, or unavailable. This is overall position, not independent downlock indication for each gear leg.
-- Stale instruments show “--”. Missing data is not treated as zero or gear up.
-- Automatic PC discovery followed by unicast delivery, unicast registration keepalives to the learned PC, receiver retries, and rediscovery after a timeout.
-- A DLL heartbeat independent of flight-data updates, allowing the HUD to distinguish a responding PC with stale flight data from a silent sender.
-
-**Reading the display:** ENG / 油门 uses Aircraft.Throttle. It is throttle percentage, not actual engine thrust or N1. “Time since last packet” is measured locally on the glasses and is not round-trip network latency. When no heartbeat is received, the protocol alone cannot determine whether the game was closed or the network failed.
-
-## Download and installation
-
-Current build artifacts are included in the repository:
-
-- [Android APK](release/AeroflyRokidHud-2.6-English.apk)
-- [Windows x64 DLL](release/AeroflyRokidHud.dll)
-- [SHA-256 checksums](release/SHA256SUMS.txt)
-
-If GitHub opens a binary preview page, use **Download raw file**.
-
-### PC
-
-1. Close Aerofly FS 4 completely.
-2. Place the DLL in this location under your Windows Documents folder:
-
-   ```text
-   Aerofly FS 4\external_dll\AeroflyRokidHud.dll
-   ```
-
-   Create external_dll if it does not exist. This is the Documents location, not the Steam installation directory.
-3. Restart the game and enter a flight.
-
-### Glasses
-
-The target is **display-equipped Rokid glasses that allow installation of a compatible Android APK**. The APK requires Android 7.0 / API 24 or later. Installation permissions and landscape support depend on the model and firmware and still require device testing.
-
-Enable developer mode and ADB on the device, then install:
-
-```powershell
-adb install -r .\release\AeroflyRokidHud-2.6-English.apk
-```
-
-Open **Aerofly HUD** and connect the PC and glasses to the same local network. “实时飞行” means valid flight data is being received.
-
-The supplied APK is signed with a development debug key. The repository does not include the private signing key. A build produced on another computer will normally have a different signature and cannot directly replace an installed APK signed with the original key.
+Keep CMD and PS1 together. Existing settings may retain manual mode. Save / Enable selects a manual runway; Disable reference turns the reference off.
 
 ## Network and troubleshooting
 
-| Port | Purpose |
-| --- | --- |
-| UDP 49002 | Telemetry reception on the glasses |
-| UDP 49003 | Discovery and registration reception on the PC |
+The PC receives UDP 49003; glasses receive UDP 49002. Allow Aerofly on your trusted private network. Guest networks, client isolation and broadcast filtering can prevent discovery. Do not disable the whole firewall. UDP is unauthenticated and unencrypted: trusted LANs only.
 
-- Windows Firewall must allow Aerofly on the trusted private network being used.
-- The same Wi-Fi name does not guarantee device-to-device communication. Guest networks, client isolation, or broadcast filtering can prevent initial discovery.
-- If discovery fails, try connecting the glasses to a PC hotspot.
-- After registration, the PC sends unicast data and retains low-frequency broadcasts. Recovery time depends on the devices and network; there is no fixed reconnection-time guarantee.
-- The UDP protocol has no authentication or encryption. Use it only on a trusted local network.
+No PC: check DLL location, game restart and network. No automatic reference: check DAT, automatic mode, fresh telemetry and approach position. Candidates must remain stable for about 3 seconds; no reference outside the approach region is normal. See the tutorial.
 
-| On-screen message | Meaning |
-| --- | --- |
-| 实时飞行 | Live flight: PC communication and the main flight fields are valid |
-| 等待游戏 | Waiting for flight data: PC heartbeat is present, but main fields are missing or stale |
-| 寻找电脑 / 正在重连 | Searching for PC / reconnecting: no data yet, or recent packets have timed out |
-| 不可用 / -- | Unavailable: the field has no valid fresh value |
-| 测试数据 | Simulated test data |
+## Validation and preview
 
-To test the HUD with simulated telemetry, close Aerofly first and run:
+**The author confirmed device testing for v2.5, not this new v2.6 AutoRunway update.** New-version notes record local DLL/UDP, selection/locking, regression and Android build/lint checks, but no on-glasses validation of the new features. This upload checks APK version/signatures and bundle consistency, not every device or aircraft.
 
-```powershell
-.\Test-Hud-Stream.ps1 -Seconds 60
-# Optionally specify the glasses' IP address:
-.\Test-Hud-Stream.ps1 -Target 192.168.1.50 -Seconds 60
-```
+![Historical wide HUD layout preview](docs/HUD-wide-live.png)
 
-Simulated packets are labeled “测试数据” on screen. The script uses the same discovery port as the DLL; do not run them simultaneously.
+Historical layout rendered with simulated values; not a device photo or a screenshot of the latest AutoRunway page.
 
-## Building from source
+## Source and older versions
 
-### DLL
+Existing repository source, build scripts and old release notes remain for reference. **They have not been synchronized with these new binaries and are not guaranteed to reproduce this release.** Use the latest bundle and v2.6 tutorial above; older APK/ZIP files are historical artifacts.
 
-Requires Windows, Visual Studio 2022 Build Tools, MSVC v143, and a Windows SDK:
+[Historical changelog](CHANGELOG.en.md) · [Historical v2.5 tutorial](docs/TUTORIAL-2.5.en.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
-```powershell
-.\Build-Plugin.ps1
-```
-
-The script downloads the header from the official IPACS External DLL Sample, builds the x64 DLL, places it in release, and copies it into the current user's Aerofly external DLL folder under Documents. **Close the game before running it.**
-
-### APK
-
-Requires a working JDK (JDK 21 was used locally) and network access for build tools:
-
-```powershell
-.\Build-Apk.ps1
-```
-
-The script downloads the Android SDK and Gradle into .build-cache and produces release/AeroflyRokidHud-2.6-English.apk. The current toolchain uses Gradle 8.10.2, Android Gradle Plugin 8.8.2, and compile/target SDK 35.
-
-The existing script automatically accepts Android SDK licenses. Review and agree to the relevant licenses before using it.
-
-## Project structure
-
-```text
-aerofly-plugin/        Read-only C++ telemetry bridge and official SDK header
-glasses-app/           Java Android receiver, protocol parser, and Canvas HUD
-docs/                 Layout previews
-release/              Current APK, DLL, and checksums
-Build-Plugin.ps1       Build and install the PC DLL
-Build-Apk.ps1          Build the APK
-Test-Hud-Stream.ps1    Simulated telemetry sender
-```
-
-## Validation status
-
-Completed: C++ compilation, APK build and signature verification, local DLL loading and UDP unicast tests, unit conversion, stale-data handling, re-registration, and reinitialization; Java receiver checks for malformed and out-of-order packets, 30 rapid pause/resume cycles, rebinding after silence, and recovery after a port becomes available; desktop previews for normal, warning, and disconnected states.
-
-The author confirms that v2.5 has been tested on actual glasses. This applies to the author's device and environment, not comprehensive coverage of real Wi-Fi switching, every device model, or every aircraft's fields and alert behavior. Fields not provided by the simulator are shown as unavailable.
-
-## Versions and third-party material
-
-- [Changelog](CHANGELOG.en.md)
-- [2.1.0 release notes — Chinese and English](RELEASE_NOTES.md)
-- [Third-party notices](THIRD_PARTY_NOTICES.md)
-- [IPACS developer page and External DLL Sample](https://www.aerofly.com/developer/)
-
-Aircraft.VerticalSpeed is supplied in m/s and converted to ft/min. Aircraft.Gear uses 0 for up, 1 for down, and intermediate values for transit. The project reads simulator data and does not send control commands to the game.
+Unofficial personal project, not affiliated with IPACS or Rokid. Runway data comes from [OurAirports](https://ourairports.com/data/) and may differ from simulator scenery. Online maps use OpenStreetMap. Simulation only, never real flight.

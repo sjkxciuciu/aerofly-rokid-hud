@@ -4,7 +4,7 @@ Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 $form = New-Object Windows.Forms.Form
 $form.Text = 'Aerofly HUD 2.6 - 3 degree reference / NOT ILS'
-$form.ClientSize = New-Object Drawing.Size(620, 395)
+$form.ClientSize = New-Object Drawing.Size(620, 445)
 $form.StartPosition = 'CenterScreen'
 $form.FormBorderStyle = 'FixedDialog'
 $form.MaximizeBox = $false
@@ -33,11 +33,13 @@ $save = New-Object Windows.Forms.Button
 $save.Text = 'Save / Enable'; $save.SetBounds(200, 335, 140, 35); $form.Controls.Add($save)
 $disable = New-Object Windows.Forms.Button
 $disable.Text = 'Disable reference'; $disable.SetBounds(365, 335, 150, 35); $form.Controls.Add($disable)
+$automatic = New-Object Windows.Forms.Button
+$automatic.Text = 'Automatic runway selection'; $automatic.SetBounds(200, 385, 315, 35); $form.Controls.Add($automatic)
 $save.Add_Click({
     try {
         if ($inputs[0].Text -notmatch '^[A-Za-z0-9 /-]{1,24}$' -or [string]::IsNullOrWhiteSpace($inputs[0].Text)) { throw 'Enter a runway name using 1-24 letters, numbers, spaces, / or -.' }
         $limits = @(@(-90,90), @(-180,180), @(-2000,20000), @(0,360))
-        $lines = @('[Approach]', 'Enabled=1', ('Name=' + $inputs[0].Text))
+        $lines = @('[Approach]', 'Enabled=1', 'Automatic=0', ('Name=' + $inputs[0].Text))
         for ($i = 1; $i -lt 5; $i++) {
             $number = 0.0
             if (![double]::TryParse($inputs[$i].Text, [Globalization.NumberStyles]::Float, [Globalization.CultureInfo]::InvariantCulture, [ref]$number) -or
@@ -64,5 +66,18 @@ $disable.Add_Click({
         }
         [Windows.Forms.MessageBox]::Show('Reference disabled.', 'Disabled')
     } catch { [Windows.Forms.MessageBox]::Show($_.Exception.Message, 'Cannot disable') }
+})
+$automatic.Add_Click({
+    try {
+        $directory=Split-Path -Parent $ConfigPath
+        if (!(Test-Path -LiteralPath (Join-Path $directory 'AeroflyRokidRunways.dat'))) { throw 'Install AeroflyRokidRunways.dat beside the DLL first.' }
+        $body=if(Test-Path -LiteralPath $ConfigPath){[IO.File]::ReadAllText($ConfigPath)}else{"[Approach]`r`n"}
+        $body=[regex]::Replace($body,'(?m)^(Enabled|Automatic)=.*\r?\n?','')
+        $body=$body.TrimEnd()+"`r`nEnabled=1`r`nAutomatic=1`r`n"
+        $temporary=Join-Path $directory ('approach-'+[Guid]::NewGuid().ToString('N')+'.tmp')
+        [IO.File]::WriteAllText($temporary,$body,[Text.Encoding]::ASCII)
+        if(Test-Path -LiteralPath $ConfigPath){[IO.File]::Replace($temporary,$ConfigPath,$null)}else{[IO.File]::Move($temporary,$ConfigPath)}
+        [Windows.Forms.MessageBox]::Show('Automatic mode enabled. Check the selected runway on the glasses. This does not follow the game FMS.', 'Automatic')
+    } catch { [Windows.Forms.MessageBox]::Show($_.Exception.Message,'Cannot enable automatic mode') }
 })
 [void]$form.ShowDialog()
